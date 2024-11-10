@@ -1,4 +1,5 @@
 #!/bin/bash
+# script source: https://github.com/yyearth/turnoff-BD-PROCHOT
 a=`rdmsr 0x1FC`
 b="0x$a"
 c=$(($b&0xFFFFFFFE)) # bitwise AND
