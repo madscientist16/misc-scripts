@@ -1,0 +1,10 @@
+[Unit]
+Description=Disable BD PROCHOT after suspend
+After=suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/bd-prochot-off.sh
+
+[Install]
+WantedBy=suspend.target
