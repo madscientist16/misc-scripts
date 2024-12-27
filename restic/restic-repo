@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export RESTIC_REPOSITORY=repo-location
+export RESTIC_PASSWORD=repo-password
+
+exec restic "$@"
