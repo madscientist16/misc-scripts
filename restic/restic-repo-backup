@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo ""
 echo "BACKING UP"
 restic-hdd backup --exclude-file /dir/restic-excludes.txt --files-from /dir/restic-includes.txt --skip-if-unchanged
 echo ""
