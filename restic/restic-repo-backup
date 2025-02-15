@@ -1,8 +1,13 @@
 #!/bin/bash
 
-echo ""
-echo "BACKING UP"
-restic-hdd backup --exclude-file /dir/restic-excludes.txt --files-from /dir/restic-includes.txt --skip-if-unchanged
-echo ""
-echo "REMOVING BACKUP SNAPSHOTS"
-restic-hdd forget --keep-within-weekly 1m --keep-within-monthly 6m --prune && restic-hdd check
+if restic-repo cat config &> /dev/null; then
+  echo "REPO EXISTS"
+  echo ""
+  echo "BACKING UP"
+  restic-repo backup --exclude-file /dir/restic-excludes.txt --files-from /dir/restic-includes.txt --skip-if-unchanged
+  echo ""
+  echo "REMOVING BACKUP SNAPSHOTS"
+  restic-repo forget --keep-within-weekly 1m --keep-within-monthly 6m --prune && restic-repo check
+else
+  echo "REPO DOES NOT EXIST"
+fi

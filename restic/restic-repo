@@ -3,9 +3,4 @@
 export RESTIC_REPOSITORY=repo-location
 export RESTIC_PASSWORD=repo-password
 
-if restic cat config &> /dev/null; then
-  echo "REPO EXISTS"
-  exec restic "$@"
-else
-  echo "REPO DOES NOT EXIST"
-fi
+exec restic "$@"
