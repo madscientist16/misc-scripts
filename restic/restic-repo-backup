@@ -1,7 +1,7 @@
 #!/bin/bash
 
-restic-hdd cat config > /dev/null
-
-restic-hdd --verbose backup --exclude-file /dir/restic-excludes.txt --files-from /dir/restic-includes.txt --skip-if-unchanged
-
-restic-hdd --verbose forget --keep-weekly 4 --prune && restic-hdd --verbose check
+echo "BACKING UP"
+restic-hdd backup --exclude-file /dir/restic-excludes.txt --files-from /dir/restic-includes.txt --skip-if-unchanged
+echo ""
+echo "REMOVING BACKUP SNAPSHOTS"
+restic-hdd forget --keep-within-weekly 1m --keep-within-monthly 6m --prune && restic-hdd check
