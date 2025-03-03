@@ -1,4 +1,4 @@
-## Requirements
+# Requirements
 - `msr-tools`
 
 **Arch Linux:**
@@ -13,7 +13,7 @@ sudo dnf install msr-tools
 ```
 sudo apt install msr-tools
 ```
-# Instructions
+# Usage
 1. Copy `bd-prochot-off.sh` to `/usr/local/bin` and make it executable
 ```
 sudo cp bd-prochot-off.sh /usr/local/bin && sudo chmod +x /usr/local/bin/bd-prochot-off.sh
