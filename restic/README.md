@@ -13,7 +13,7 @@ sudo dnf install restic
 ```
 sudo apt install restic
 ```
-# Instructions
+# Usage
 1. Modify and copy the scripts to `/usr/local/bin`
 2. Change owner of the scripts to `root` and permissions to `700`
 ```
