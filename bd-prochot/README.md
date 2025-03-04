@@ -14,9 +14,9 @@ sudo dnf install msr-tools
 sudo apt install msr-tools
 ```
 # Usage
-1. Copy `bd-prochot-off.sh` to `/usr/local/bin` and make it executable
+1. Make `bd-prochot-off.sh` executable and copy it to `/usr/local/bin`
 ```
-sudo cp bd-prochot-off.sh /usr/local/bin && sudo chmod +x /usr/local/bin/bd-prochot-off.sh
+chmod +x bd-prochot-off.sh && sudo cp bd-prochot-off.sh /usr/local/bin
 ```
 2. Copy the systemd unit files to `/etc/systemd/user`
 ```
