@@ -18,9 +18,9 @@ sudo apt install msr-tools
 ```
 chmod +x bd-prochot-off.sh && sudo cp bd-prochot-off.sh /usr/local/bin
 ```
-2. Copy the systemd unit files to `/etc/systemd/user`
+2. Copy the systemd unit files to `/etc/systemd/system`
 ```
-sudo cp bd-prochot-off-*.service /etc/systemd/user
+sudo cp bd-prochot-off-*.service /etc/systemd/system
 ```
 3. Enable the systemd units
 ```
