@@ -19,7 +19,7 @@ sudo apt install restic
 2. Run `restic-repo init` to create the restic repository
 3. Run `restic-repo-backup` to make a backup
 
-# Backing up only specific files and folders
+# Backup specific files and folders
 ## restic-excludes.txt
 If the parent directory is excluded you can't include anything inside it.
 So we first include the parent directory then exclude everything inside it.
