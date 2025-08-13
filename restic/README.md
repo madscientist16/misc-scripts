@@ -32,7 +32,7 @@ $HOME/*
 # include $HOME/.config
 !$HOME/.config
 
-# exclude everything inside $HOME/.config
+# exclude everything in $HOME/.config
 $HOME/.config/*
 
 # include $HOME/.config/nvim
