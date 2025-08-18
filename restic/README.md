@@ -1,9 +1,9 @@
-# Restic Backup Script for linux
+# Restic Backup Scripts for Linux
 
-Simple scripts to backup using restic.
+Simple scripts to backup using [restic](https://restic.net/).
 
-# Requirements
-- `restic`
+## Requirements
+- restic
 
 **Arch Linux:**
 ```sh
@@ -26,7 +26,7 @@ sudo apt install restic
 2. Run `restic-repo init` to create the restic repository
 3. Run `restic-repo-backup` to make a backup
 
-## Backup specific files and folders
+## Backup specific files and directories
 ### restic-excludes.txt
 If the parent directory is excluded you can't include anything inside it.
 So we first include the parent directory then exclude everything inside it.
